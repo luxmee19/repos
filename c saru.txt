@@ -1,0 +1,99 @@
+/*****************************************************
+*file         :AO6marixmul.c
+*description  :program to implement matrix multiplication
+************************************************************/
+#include<stdio.h>
+#include<stdlib.h>
+
+/***********************************************************
+*function        :main
+*input parameters: no parameters
+*RETURNS         : 0 on sucess
+************************************************************/
+
+int main (void)
+{
+    int im,in,ip,iq,i,j,k,iamat1[10][10],iamat2[10][10]
+    int.iaprod[10][10]={0}
+    printf("\n**************************************");
+    printf("\n\tPROGRAM TO IMPLEMENT MATRIX MULTIPLICATION\T\N");
+
+    printf("\n enter the order of mmatrix1\n");
+    scanf("%d%d,&ip,&iq");
+
+    if(in!=ip)
+    {
+        printf("\n matrix multiplication not possiable\n");
+        exit(0);
+    }
+
+    printf("\n matrix multiplication is not posible\n");
+for(i=0;i<im;j++)
+    scanf("%d",&iamat1[i][j]);
+
+    printf("\n enterr the element of matrix 2\n");
+    for(i=0;i<ip;i++)
+        for(j=0,j<<iq;j++)
+        scanf("%d",&iamat2[i][j]);
+
+    for(i=o;,i<iM;i++)
+    {
+        for(j=0;j<iQ;j++)
+        {
+            for(k=0;k<iN;k++)
+            {
+                iaprod[i][j]+=ia mat2[i][k]*ia mat2[k][j];
+}
+        }
+    }
+/*
+  *******************************************************************
+  **************
+           |*|            |*|
+a00 a01 a02|*|b00 b01 b02 |*|
+           |*|            |*|
+a10 a11 a12|*|b10 b11 b12 |*|
+           |*|            |*|
+a20 a21 a22|*|b21 b21 b22 |*|
+           |*|            |*|
+
+(a00*b00+a01*b10+a02*b20)(a00*b01+a01*b11+a02*b21)(a00*b02+a01*b12+a02*b22)
+(a10*b00+a11*b10+a12*b20)(a10*b01+a11*b11+a12*b21)(a10*b02+a11*b12+a12*b22)
+(a20*b00+a21*b10+a22*b20)(a20*b01+a21*b11+a22*b21)(a20*b02+a21*b12+a22*b22)
+
+*******************************************************************************
+**************
+             */
+
+    printf("\n matrix1\n");
+
+    for(i=0;i<iM:i++)
+    {
+        for(j=0;i<iN;j++)
+        {
+            printf("%d,\t",ia mat[i][j]);
+        }
+        printf("\n");
+    }
+    printf("\n");
+    printf("\n matrix2\n");
+     for(i=0;j<iQ;j++)
+     {
+         printf("%d\t",ia mat2[i][j])
+     }
+     printf("\n");
+     }
+     printf("\n");
+printf("\n the product matrix is \n");
+
+    for(i=0;i<iM;i++)
+    {
+        for(j=0;j<iQ;j++)
+        {
+            printf("%d\t",iaprod[i][j]);
+        }
+        printf("\n");
+    }
+    printf("\n");
+    return 0;
+}
